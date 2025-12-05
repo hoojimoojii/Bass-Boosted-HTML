@@ -6,8 +6,8 @@ body, html {
 }
 
 #magazine{
-	width: 800px;
-	height: 560px;
+	width: 1000px;
+	height: 700px;
 }
 
 #magazine .turn-page{
@@ -15,25 +15,24 @@ body, html {
 }
 
 #pages {
-    width: 200%;
+    width: 300%;
     box-sizing: border-box;
     display: flex;
 }
 
 .page {
+    display: inline-flex;
     height: 100vh;
     width: 100vw;
     transition: all 1s;
 }
 
 .page-one {
-    background-color: white;
-    display: inline-flex;
+    background-color: yellow;
 }
 
 .page-two {
     background-color: white;
-    display: inline-flex;
     justify-content: center;
 }
 
@@ -48,9 +47,8 @@ button {
 }
 
 .container-home {
-    padding-left: 30px;
+    padding: 30px;
     display: inline-flex;
-    align-items: center;
     height: 50vh;
     width: 50vw;
 }
@@ -83,20 +81,39 @@ button {
 }
 
 .container-hand-book {
-    height: 50%;
-    top: -400px;
-    right: 182px;
+    height: 700px;
+    top: -1000px;
+    right: 132px;
     position: absolute;
-    transition: all 1s;
+    transition: all 0.1s;
     cursor: pointer;
 }
 
-.container-home-text {
-    display: inline;
+.section-one {
+    padding: 30px;
+    display: inline-flex;
+    height: 50vh;
+    width: 50vw;
 }
 
-.fancy {
-    font-family: "Bodoni Moda", serif;
+.section-two {
+    padding: 30px;
+    display: inline-flex;
+    height: 50vh;
+    width: 50vw;
+}
+
+.first-page-hype {
+    width: 100%;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    font-weight: bold;
 }
 
 h1, h2 {
@@ -105,5 +122,5 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
 }
