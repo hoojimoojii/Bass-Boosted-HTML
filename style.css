@@ -1,21 +1,41 @@
-body, html {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-#magazine{
-	width: 1000px;
-	height: 700px;
+.page-wrapper {
+    width: 480vw;
+    overflow-x: hidden;
 }
 
-#magazine .turn-page{
-	background-color: white;
+#collage-caption {
+    font-size: medium;
+    width: 100%;
+    height: 10%;
+}
+
+#collage {
+    border: solid;
+    cursor: cell;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.collage-image {
+    width: 50%;
+    object-fit: contain;
+    position: absolute;
 }
 
 #pages {
-    width: 300%;
+    width: 560vw;
     box-sizing: border-box;
     display: flex;
 }
@@ -23,34 +43,90 @@ body, html {
 .page {
     display: inline-flex;
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
     transition: all 1s;
 }
 
 .page-one {
-    background-color: yellow;
+    background-color: #BA4A9B;
 }
 
 .page-two {
     background-color: white;
-    justify-content: center;
+}
+
+.page-three {
+    background-color: #82A177;
+}
+
+.subpagesholder {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.subpage-radar {
+    box-sizing:border-box;
+    background-color: white;
+    border: solid;
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: justify;
+    font-size: small;
+}
+
+.subpage-radar-image {
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 12px;
+}
+
+.subpage-radar-cover {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.subpage-review {
+    box-sizing:border-box;
+    background-color: white;
+    border: solid;
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: justify;
+    font-size: small;
+}
+
+.subpage-review-hype {
+    margin: 0;
+    font-size: large;
+    white-space: pre-wrap;
+    text-align: justify;
+    line-height: 120%;
+    text-align-last: justify;
+}
+
+.subpage-review-content {
+    white-space: pre-wrap;
 }
 
 button {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  padding-top: 40px;
-  margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    padding-top: 40px;
+    margin: 0;
 }
 
 .container-home {
     padding: 30px;
     display: inline-flex;
     height: 50vh;
-    width: 50vw;
+    width: 30vw;
 }
 
 .container-zine {
@@ -67,44 +143,141 @@ button {
 }
 
 .container-hand-front {
-    height: 450px;
-    align-self: flex-end;
-    margin-left: auto;
+    width: 30%;
+    bottom: 0px;
+    right: 0px;
     position: absolute;
 }
 
 .container-hand-back {
-    height: 450px;
+    width: 30%;
     align-self: flex-end;
-    margin-left: auto;
+    right: 0px;
     position: absolute;
 }
 
 .container-hand-book {
-    height: 700px;
+    object-fit: contain;
     top: -1000px;
-    right: 132px;
     position: absolute;
     transition: all 0.1s;
     cursor: pointer;
 }
 
 .section-one {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
     padding: 30px;
-    display: inline-flex;
-    height: 50vh;
-    width: 50vw;
+    width: 50%;
 }
 
 .section-two {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
     padding: 30px;
-    display: inline-flex;
-    height: 50vh;
-    width: 50vw;
+    width: 50%;
 }
 
 .first-page-hype {
     width: 100%;
+}
+
+.second-page-hype {
+    width: 100%;
+}
+
+.playlist {
+    display: block;
+}
+
+.playlist-song {
+    margin: 10px;
+    width: 100%;
+    height: 120px;
+    display: inline-block;
+}
+
+.playlist-song-cover {
+    height: 100%;
+    padding-right: 10px;
+    border-right: 1px solid black;
+    display: inline-block;
+}
+
+.playlist-song-title {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.playlist-song-cover img {
+    height: 100%;
+}
+
+.article {
+    height: 100%;
+    text-align: center;
+}
+
+.article-column {
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+}
+
+.article-column-top {
+    width: 50%;
+    height: 40%;
+}
+
+.article-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: small;
+    white-space: pre-wrap;
+    text-align: justify;
+    line-height: 120%;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subarticle-column {
+    width: 100%;
+    height: 40%;
+    display: inline-block;
+}
+
+.subarticle-column-top {
+    width: 50%;
+    height: 60%;
+}
+
+.subarticle-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: small;
+    white-space: pre-wrap;
+    text-align: justify;
+    line-height: 120%;
+}
+
+.subarticle-thumbnail {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.text-type {
+    font-family: 'Courier New', monospace;
+}
+
+.subheading {
+    font-weight: bold;
 }
 
 .link {
@@ -116,11 +289,62 @@ button {
     font-weight: bold;
 }
 
-h1, h2 {
-    margin: 6px;
+h1, h2, h3, h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: normal;
 }
 
 h1 {
     font-size: 60px;
+}
+
+@media only screen and (max-device-width: 1100px) {
+    .page-wrapper {
+        width: 960vw;
+        overflow-x: hidden;
+    }
+
+    #pages {
+        width: 1120vw;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .page {
+        display: inline-flex;
+        height: 100vh;
+        width: 160vw;
+        transition: all 1s;
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+    .page-wrapper {
+        width: 1200vw;
+        overflow-x: hidden;
+    }
+
+    #pages {
+        width: 1400vw;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .page {
+        display: inline-flex;
+        height: 100vh;
+        width: 200vw;
+        transition: all 1s;
+    }
+
+    h1, h2 {
+        font-size: medium;
+    }
+
+    h1, h2, h3, h5 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: normal;
+    }
 }
