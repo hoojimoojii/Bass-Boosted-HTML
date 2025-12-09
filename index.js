@@ -33,6 +33,8 @@ book.style.right = hand_width / 2 + "px"
 book.style.width = hand_width + "px"
 var book_height = book.getBoundingClientRect().height
 
+var lim_height = viewportHeight - hand_height / 1.1
+
 slide = (direction) => {
 
     if(direction === "next") {
@@ -62,10 +64,10 @@ addEventListener("mousemove", (e) => {
     translateY = 'translateY(' + (mouseY + 1000 - book_height / 2) + 'px)';
     console.log(mouseY)
 
-    if (translate && mouseY < viewportHeight - hand_height / 1.1) {
+    if (translate && mouseY < lim_height) {
         book.style.transform = translateY;
     } else {
-        book.style.transform = 'translateY(' + (viewportHeight - hand_height / 1.1 + 1000 - book_height/2) + 'px)';
+        book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
         translate = false
     }
 })
@@ -75,7 +77,7 @@ addEventListener("touchmove", (e) => {
     translateY = 'translateY(' + (mouseY + 1000 - book_height / 2) + 'px)';
     console.log(mouseY)
 
-    if (translate && mouseY < viewportHeight - hand_height / 1.1) {
+    if (translate && mouseY < lim_height) {
         book.style.transform = translateY;
     } else {
         book.style.transform = 'translateY(' + (viewportHeight - hand_height / 1.1 + 1000 - book_height/2) + 'px)';

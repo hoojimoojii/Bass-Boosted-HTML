@@ -152,7 +152,7 @@ button {
 
 .container-hand-back {
     width: 30%;
-    align-self: flex-end;
+    bottom: 0px;
     right: 0px;
     position: absolute;
 }
