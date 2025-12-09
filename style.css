@@ -5,6 +5,7 @@ html, body {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    --border-size: 1px;
 }
 
 .page-wrapper {
@@ -19,7 +20,7 @@ html, body {
 }
 
 #collage {
-    border: solid;
+    border: solid, var(--border-size);
     cursor: cell;
     position: relative;
     width: 100%;
@@ -67,7 +68,7 @@ html, body {
 .subpage-radar {
     box-sizing:border-box;
     background-color: white;
-    border: solid;
+    border: solid, var(--border-size);
     width: 100%;
     padding: 12px;
     margin-top: 6px;
@@ -90,7 +91,7 @@ html, body {
 .subpage-review {
     box-sizing:border-box;
     background-color: white;
-    border: solid;
+    border: solid, var(--border-size);
     width: 100%;
     padding: 12px;
     margin-top: 6px;
@@ -320,6 +321,16 @@ h1 {
 }
 
 @media only screen and (max-device-width: 800px) {
+    html, body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        --border-size: 0.5px;
+    }
+
     .page-wrapper {
         width: 1200vw;
         overflow-x: hidden;
