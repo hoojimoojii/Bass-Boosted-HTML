@@ -328,7 +328,7 @@ h1 {
         height: 100vh;
         overflow-x: hidden;
         overflow-y: hidden;
-        --border-size: 0.5px;
+        --border-size: 0.8px;
     }
 
     .page-wrapper {
