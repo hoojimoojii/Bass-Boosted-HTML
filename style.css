@@ -160,6 +160,8 @@ button {
 }
 
 .container-hand-book {
+    right: 15%;
+    width: 30%;
     object-fit: contain;
     top: -1000px;
     position: absolute;
@@ -353,16 +355,15 @@ h1 {
 
     .container-hand-front {
         width: 50%;
-        bottom: 0px;
-        right: 0px;
-        position: absolute;
     }
 
     .container-hand-back {
         width: 50%;
-        bottom: 0px;
-        right: 0px;
-        position: absolute;
+    }
+
+    .container-hand-book {
+        right: 25%;
+        width: 50%;
     }
 
     h1 {

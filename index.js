@@ -27,12 +27,8 @@ const collage_captions = [
 ]
 
 history.scrollRestoration = 'manual';
-var hand_width = hand.getBoundingClientRect().width
 var hand_height = hand.getBoundingClientRect().height
-book.style.right = hand_width / 2 + "px"
-book.style.width = hand_width + "px"
 var book_height = book.getBoundingClientRect().height
-
 var lim_height = viewportHeight - hand_height / 1.1
 
 // VIDEO
