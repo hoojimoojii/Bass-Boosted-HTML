@@ -31,7 +31,7 @@ var hand_height = hand.getBoundingClientRect().height
 var book_height = book.getBoundingClientRect().height
 var lim_height = viewportHeight - hand_height / 1.1
 
-// VIDEO
+console.log((lim_height + 1000 - book_height/2))
 book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
 translate = false
 
