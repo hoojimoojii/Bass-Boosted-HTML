@@ -30,7 +30,9 @@ html, body {
 }
 
 .collage-image {
-    width: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
     object-fit: contain;
     position: absolute;
 }
