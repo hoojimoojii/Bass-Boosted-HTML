@@ -27,11 +27,10 @@ const collage_captions = [
 ]
 
 history.scrollRestoration = 'manual';
-var hand_height = hand.getBoundingClientRect().height
-var book_height = book.getBoundingClientRect().height
+var hand_height = hand.clientHeight
+var book_height = book.clientHeight
 var lim_height = viewportHeight - hand_height / 1.1
 
-console.log((lim_height + 1000 - book_height/2))
 book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
 translate = false
 
