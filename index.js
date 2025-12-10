@@ -31,9 +31,8 @@ var hand_height = hand.clientHeight
 var book_height = book.clientHeight
 var lim_height = viewportHeight - hand_height / 1.1
 
-book.addEventListener("load", (e) => {
-    book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
-})
+console.log(hand_height, book_height, lim_height)
+book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
 
 slide = (direction) => {
 
