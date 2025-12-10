@@ -163,7 +163,7 @@ button {
     object-fit: contain;
     top: -1000px;
     position: absolute;
-    transition: all 0.1s;
+    transition: all 1s;
     cursor: pointer;
 }
 

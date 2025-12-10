@@ -35,6 +35,10 @@ var book_height = book.getBoundingClientRect().height
 
 var lim_height = viewportHeight - hand_height / 1.1
 
+// VIDEO
+book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
+translate = false
+
 slide = (direction) => {
 
     if(direction === "next") {
@@ -59,10 +63,10 @@ slide = (direction) => {
     
 }
 
+/*
 addEventListener("mousemove", (e) => { 
     mouseY = e.pageY;
     translateY = 'translateY(' + (mouseY + 1000 - book_height / 2) + 'px)';
-    console.log(mouseY)
 
     if (translate && mouseY < lim_height) {
         book.style.transform = translateY;
@@ -75,15 +79,15 @@ addEventListener("mousemove", (e) => {
 addEventListener("touchmove", (e) => {
     mouseY = e.touches[0].pageY;
     translateY = 'translateY(' + (mouseY + 1000 - book_height / 2) + 'px)';
-    console.log(mouseY)
 
     if (translate && mouseY < lim_height) {
         book.style.transform = translateY;
     } else {
-        book.style.transform = 'translateY(' + (viewportHeight - hand_height / 1.1 + 1000 - book_height/2) + 'px)';
+        book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
         translate = false
     }
 })
+*/
 
 let i = 0
 
