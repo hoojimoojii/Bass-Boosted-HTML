@@ -31,10 +31,12 @@ var hand_height = hand.clientHeight
 var book_height = book.clientHeight
 var lim_height = viewportHeight - hand_height / 1.1
 
-setTimeout(() => {
+document.addEventListener("DOMContentLoaded", function(event) {
+    window.requestAnimationFrame(() => {
     //console.log(hand_height, book_height, viewportHeight)
     book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
-}, 200)
+});
+});
 
 slide = (direction) => {
 
