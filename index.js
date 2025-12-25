@@ -27,15 +27,15 @@ const collage_captions = [
 ]
 
 history.scrollRestoration = 'manual';
-var hand_height = hand.clientHeight
-var book_height = book.clientHeight
-var lim_height = viewportHeight - hand_height / 1.1
 
 document.addEventListener("DOMContentLoaded", function(event) {
     window.requestAnimationFrame(() => {
-    //console.log(hand_height, book_height, viewportHeight)
-    book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
-});
+        var hand_height = hand.clientHeight
+        var book_height = book.clientHeight
+        var lim_height = viewportHeight - hand_height / 1.1
+        //console.log(hand_height, book_height, viewportHeight)
+        book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
+    });
 });
 
 slide = (direction) => {
