@@ -28,7 +28,7 @@ const collage_captions = [
 
 history.scrollRestoration = 'manual';
 
-document.addEventListener("DOMContentLoaded", function(event) {
+window.addEventListener("load", function(event) {
     window.requestAnimationFrame(() => {
         var hand_height = hand.clientHeight
         var book_height = book.clientHeight
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         //console.log(hand_height, book_height, viewportHeight)
         book.style.transform = 'translateY(' + (lim_height + 1000 - book_height/2) + 'px)';
     });
-});
+}, false);
 
 slide = (direction) => {
 
